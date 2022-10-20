@@ -41,18 +41,26 @@ for (let i = 0; i < team.length; i++) {
     }
     
 }
-//Stampare le stesse informazioni su DOM
+//Stampare l'informazioni su DOM
 for (let i = 0; i < team.length; i++) {
     const teamMember = team[i];
     //console.log(teamMember);
-    const cardMarkup = `
-    <div class="col">
-        <div class="card border-0 rounded-0">
-            <img src="${teamMember.image}" alt="">
-            <h4 class="pt-3">${teamMember.name}</h4>
-            <p>${teamMember.role}</p>
-        </div>
-    </div>`
+    const cardMarkup = markupCreation (teamMember)
     //console.log(cardMarkup);
     document.querySelector('.row').insertAdjacentHTML('beforeend', cardMarkup)
+}
+
+
+
+//function
+function markupCreation(element) {
+    const markup = `
+    <div class="col">
+        <div class="card border-0 rounded-0">
+            <img src="${element.image}" alt="">
+            <h4 class="pt-3">${element.name}</h4>
+            <p>${element.role}</p>
+        </div>
+    </div>`
+    return markup;
 }
