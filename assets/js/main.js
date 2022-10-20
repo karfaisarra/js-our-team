@@ -45,9 +45,9 @@ for (let i = 0; i < team.length; i++) {
 for (let i = 0; i < team.length; i++) {
     const teamMember = team[i];
     //console.log(teamMember);
-    const cardMarkup = markupCreation (teamMember)
+    const cardMarkup = markupCreation (teamMember);
     //console.log(cardMarkup);
-    document.querySelector('.row').insertAdjacentHTML('beforeend', cardMarkup)
+    document.querySelector('.row').insertAdjacentHTML('beforeend', cardMarkup);
 }
 
 
